@@ -1,0 +1,113 @@
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+      --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+
+}
+
+main {
+    display: flex;
+}
+
+.count h1 {
+    font: 700 36px 'Poppins', sans-serif;
+    color: var(--purple);
+
+    letter-spacing: 0.105em;
+    
+    position: relative;
+    animation-name: letters;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.count h2 {
+    margin-top: 2.42rem;
+    font: 400 72px 'Poppins', sans-serif;
+    color: var(--black);
+}
+
+.count p {
+    font: 400 14px 'Poppins', sans-serif;
+    color: var(--text-color);
+
+}
+
+.count button {
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    height: 2.875rem;
+
+    font: 400 16px 'Poppins', sans-serif;
+    color: white;
+    background-color: var(--purple);
+
+    margin: 1.93rem 0 0 18.12rem;
+    transition: 0.45s;
+}
+
+.count button:hover {
+    opacity: 0.75;
+    transition: 0.45s;
+
+    margin-top: 1.5rem;
+}
+
+.count .top {
+    margin: 11.68rem 0 0 7.68rem;
+}
+
+.count p {
+    margin: 2.87rem 0 0 12.25rem;
+}
+
+.rocket {
+    margin: 9.37rem 0 0 5.12rem;
+
+    position: relative;
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+    0% {
+        margin-top: 5rem;
+    }
+
+    50% {
+        margin-top: 3rem;
+    }
+
+    75% {
+        margin-top: 5rem;
+    }
+    
+    100% {
+        margin-top: 5rem;
+    }
+}
+
+@keyframes letters {
+    0% {
+        letter-spacing: 0.105em;
+    }
+    50% {
+        letter-spacing: 0.30rem;
+    }
+    100% {
+        letter-spacing: 0.105em;
+    }
+}

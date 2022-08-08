@@ -4,6 +4,7 @@ import './App.css'
 export function App() {
 
   const [totalTime, setTotalTime] = useState(60*50)
+  const [user, setUser] = useState("Nome")
 
   var dataAtual = new Date();
 
@@ -40,6 +41,12 @@ export function App() {
     element.classList.add("noOpacity");
   }
 
+  function closeSubscribe() {
+    const element = document.querySelector("#menu");
+    element.classList.remove("opacity");
+    element.classList.add("noOpacity");
+  }
+
   return (
     <main>
       <div className="count">
@@ -54,13 +61,16 @@ export function App() {
         <img src="src\assets\rocket.svg" alt="Foguete sendo lançado" />
       </div>
       <div className="subscribe" id='menu'>
-        <h2>Seu melhor e-mail</h2>
+        <button onClick={closeSubscribe} id="close"><img src="src/assets/close.svg" alt="Close button" /></button>
+        <h2>Digite seus dados</h2>
+        <input type="text" placeholder='Digite seu nome' onChange={e => setUser(e.target.value)}/>
         <input type="text" placeholder='seuemail@email.com'/>
         <button onClick={unshowMenu}>Enviar</button>
       </div>
       <div className="verify noOpacity" id='finally'>
         <button onClick={closeMenu}><img src="src/assets/close.svg" alt="Close button" /></button>
         <img src="src/assets/verificado.png" alt="Símbolo de verificado" />
+        <p>Bem-vindo {user}</p>
         <p>E-mail cadastrado com sucesso!</p>
       </div>
     </main>

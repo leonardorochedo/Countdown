@@ -115,15 +115,16 @@ main {
     font: 500 20px 'Poppins', sans-serif;
     color: var(--black);
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .subscribe input {
     width: 15rem;
     height: 2rem;
-    border-radius: 5px;
-    border: 1px solid var(--black);
+    border-radius: 10px;
+    border: 1px solid #0000005e;
     
-    margin: 2rem 0 1.5rem 0;
+    margin: 0.25rem 0 0.75rem 0;
 }
 
 .subscribe button {
@@ -137,12 +138,37 @@ main {
     color: white;
     background-color: #3bdb38;
 
-    margin-bottom: 2rem;
+    margin: 1.25rem 0 2rem 0;
     transition: 0.45s;
 }
 
 .subscribe button:hover {
     opacity: 0.75;
+    transition: 0.45s;
+}
+
+.subscribe #close {
+    background-color: white;
+    position: absolute;
+    width: 1.85rem;
+    height: 1.85rem;
+
+    margin: -16rem 0 0 25rem;
+}
+
+.subscribe #close:hover img {
+    width: 2rem;
+    height: 2rem;
+
+    opacity: 0.75;
+    transition: 0.45s;
+}
+
+.subscribe #close img {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    margin-bottom: 2rem;
     transition: 0.45s;
 }
 
@@ -204,7 +230,7 @@ main {
 .verify p {
     font: 400 15px 'Poppins', sans-serif;
     color: var(--black);
-    padding: 1rem;
+    margin: 0.5rem 0 0 0;
 }
 
 @keyframes fly {

@@ -1,16 +1,12 @@
 :root {
     --black: #4D4C59;
     --purple: #6C63FF;
-      --light-grey: #C8C8C8;
+    --light-grey: #C8C8C8;
     --text-color: #9C9AB6;
 }
 
 * {
     margin: 0;
-}
-
-body {
-
 }
 
 main {
@@ -25,7 +21,7 @@ main {
     
     position: relative;
     animation-name: letters;
-    animation-duration: 1.5s;
+    animation-duration: 1.75s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
 }
@@ -65,7 +61,7 @@ main {
 }
 
 .count .top {
-    margin: 11.68rem 0 0 7.68rem;
+    margin: 11.68rem 0 0 8.25rem;
 }
 
 .count p {
@@ -73,13 +69,141 @@ main {
 }
 
 .rocket {
-    margin: 9.37rem 0 0 5.12rem;
+    margin: 9.37rem 0 0 45rem;
 
-    position: relative;
+    position: absolute;
     animation-name: fly;
     animation-duration: 3s;
     animation-delay: 2.5s;
     animation-iteration-count: infinite;
+}
+
+.subscribe {
+    width: 30rem;
+    height: 20rem;
+
+    opacity: 0;
+    z-index: 2;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.307);
+    background-color: white;
+
+    box-shadow: 0px 0px 100000px 100000px #00000090;
+
+    margin: 10rem 0 0 33rem;
+}
+
+.opacity {
+    opacity: 1;
+    transition: 0.45s;
+}
+
+.noOpacity {
+    display: none;
+    opacity: 0;
+    transition: 0.45s;
+}
+
+.subscribe h2 {
+    font: 700 18px 'Poppins', sans-serif;
+    color: var(--black);
+    padding: 1rem;
+}
+
+.subscribe input {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    
+    margin: 2rem 0 1.5rem 0;
+}
+
+.subscribe button {
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 8rem;
+    height: 2.5em;
+
+    font: 400 16px 'Poppins', sans-serif;
+    color: white;
+    background-color: #3bdb38;
+
+    margin-bottom: 2rem;
+    transition: 0.45s;
+}
+
+.subscribe button:hover {
+    opacity: 0.75;
+    transition: 0.45s;
+}
+
+.verify {
+    width: 20rem;
+    height: 13rem;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid #0000004e;
+    background-color: white;
+
+    margin: 14rem 0 0 -4.25rem;
+    box-shadow: 0px 0px 100000px 100000px #00000090;
+
+}
+
+.verify button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 0.45s;
+
+    position: absolute;
+    margin: -10rem 0 0 15rem;
+}
+
+.verify button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 0.45s;
+}
+
+.verify button:hover img {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    opacity: 0.75;
+    transition: 0.45s;
+}
+
+.verify img {
+    width: 4rem;
+    height: 4rem;
+
+    margin-bottom: 2rem;
+}
+
+.verify p {
+    font: 400 15px 'Poppins', sans-serif;
+    color: var(--black);
+    padding: 1rem;
 }
 
 @keyframes fly {

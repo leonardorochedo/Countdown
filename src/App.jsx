@@ -1,20 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 export function App() {
 
-  const [date, setDate] = useState("00 : 00 : 00 : 00");
+  const [totalTime, setTotalTime] = useState(60*50)
 
   var dataAtual = new Date();
 
-  var dia = dataAtual.getDate();
-  var horas = dataAtual.getHours();
-  var minutos = dataAtual.getMinutes();
-  var seconds = dataAtual.getSeconds();
+  const day = dataAtual.getDate();
+  const hours = dataAtual.getHours();
+  const minutes = Math.floor(totalTime / 60);
+  const seconds = totalTime % 60;
 
-  // setInterval(() => {
-  //   setDate(dia + " : " + horas + " : " + minutos + " : " + seconds-2);
-  // }, 1000);
+  useEffect(() => {
+    setTimeout(() => {
+      setTotalTime(totalTime -1);
+    }, 1000)
+  }, [totalTime])
 
   function showMenu() {
     const element = document.querySelector("#menu")
@@ -43,7 +45,7 @@ export function App() {
       <div className="count">
         <div className="top">
           <h1>READY TO LAUNCH IN...</h1>
-          <h2>{date}</h2>
+          <h2>{day.toString().padStart(2, "0")} : {hours.toString().padStart(2, "0")} : {minutes.toString().padStart(2, "0")} : {seconds.toString().padStart(2, "0")}</h2>
         </div>
         <p>Inscreva-se para saber mais sobre o lançamento</p>
         <button onClick={showMenu}>Inscreva-se</button>
